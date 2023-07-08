@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,800;0,900;1,100;1,400;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  box-shadow: 35px 35px 35px rgba(0, 0, 0, 0.3);
+  display: grid;
+  margin: 200px;
+  grid-template-columns: 0.4fr 0.8fr;
+  grid-template-rows: 16rem 1fr 16rem 1fr;
+  grid-template-areas:
+    "aside main"
+    "aside main"
+    "aside main"
+    "aside main";
+}
+
+aside {
+  color: whitesmoke;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 0.5fr);
+  grid-area: aside;
+  position: relative;
+  /* background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+  grid-template-areas:
+    "profile"
+    "profile"
+    "contact_Information";
+}
+
+aside::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://images.unsplash.com/photo-1608306448197-e83633f1261c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  filter: saturate(10%);
+}
+
+.profile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* horizontally center */
+  align-items: center;
+  grid-area: profile;
+  gap: 7px;
+  clip-path: polygon(100% 0, 100% 69%, 0 100%, 0 32%);
+  background-color: rgba(0, 255, 255, 0.5);
+  line-height: 1.1;
+}
+.gridBg{
+  rotate: 180deg;
+  position: absolute;
+  height: 200%;
+  width: auto;
+  z-index: -1;
+}
+.name{
+  padding-left: 10px;
+  border-left: 5px solid white;
+}
+.profile span{
+  color: black;
+}
+.profile_pic {
+  position: relative;
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.profile h4 {
+  position: relative;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.contact_Information {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto 30px;
+  grid-area: contact_Information;
+  line-height: 2.2rem;
+}
+.contact_Information ul li {
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+}
+.contact_Information ul li a:hover {
+  color: rgba(0, 255, 255, 0.5);
+}
+
+.contact_Information ul li a {
+  color: whitesmoke;
+  position: relative;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.contact_Information ul li .icon {
+  margin-right: 10px;
+}
+
+/*********************** Main ****************************/
+main {
+  display: grid;
+  grid-area: main;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  /* background-color: whitesmoke; */
+}
+
+/***** Objective *****/
+.sub_Container .sub_Title {
+  margin-bottom: 20px;
+}
+.sub_Container h4 span i {
+  margin-right: 10px;
+}
+
+.sub_Container {
+  position: relative;
+  padding: 20px;
+  height: auto;
+  border-bottom: 0.5px solid rgb(192,192,192);
+}
+.sub_Container .objective p {
+  position: relative;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.sub_Container .objective p span{
+  font-size: 1.5rem;
+  color: #4BC0C8;
+}
+/***** Work Experience *****/
+.bar.work {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.bar li {
+  position: relative;
+  list-style-type: none;
+  position: relative;
+}
+
+.bar li h4 {
+  position: relative;
+  font-size: 0.9rem;
+}
+.bar li h5 {
+  position: relative;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.bar li h6 {
+  position: relative;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.bar li:before {
+  position: relative;
+  content: "";
+  border: 8px solid rgba(31, 28, 44, 0.8);
+  float: inline-start;
+  border-radius: 50%;
+  margin: 20px;
+}
+.bar li:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 27px;
+  height: 70px;
+  width: 2px;
+  background-color: rgba(0, 255, 255, 0.5);
+  z-index: -1;
+}
+/***** Skills *****/
+.skill_Box{
+  margin: 10px;
+}
+.skill_Box .percent {
+  position: relative;
+  width: 60%;
+  height: 10px;
+  background-color: rgba(31, 28, 44, 0.8);
+  margin-left: 15px;
+  display: inline-block;
+}
+
+.skill_Box .percent .rating {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgba(0, 255, 255, 0.5);
+}
+.skill_Box h4 {
+  position: relative;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+/***** Licenses and Certificate *****/
+ul li h4 {
+  position: relative;
+  font-size: 0.9rem;
+}
+ul li h5 {
+  position: relative;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+ul li h6 {
+  position: relative;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.sub_Container .certificate ul {
+  margin-left: 20px;
+}
+.page {
+  text-align: center;
+  position: relative;
+  font-size: 0.7rem;
+  font-weight: 400;
+  margin: 15px;
+}
+/*********************** Media queries ****************************/
+@media only screen and (max-width: 1024px) {
+  .container {
+    margin: 0px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    grid-template-areas:
+      "aside"
+      "main";
+  }
+  .profile .profile_pic {
+    position: relative;
+    width: 270px;
+  }
+  aside {
+    grid-template-rows: 1fr 0.3fr;
+  }
+  
+}
+@media only screen and (min-width: 1025px) and (max-width: 1439px) {
+  h2 {
+    position: relative;
+    font-size: 0.9rem;
+  }
+  .profile h4 {
+    font-size: 0.7rem;
+    font-weight: 400;
+  }
+  .contact_Information .title {
+    position: relative;
+    font-size: 0.7rem;
+  }
+  .contact_Information ul li a {
+    position: relative;
+    font-size: 0.6rem;
+  }
+  .contact_Information ul li {
+    line-height: 1.5rem;
+  }
+  aside {
+    grid-template-rows: repeat(6, 1fr);
+  }
+  aside .profile .profile_pic {
+    position: relative;
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .profile .profile_pic {
+    position: relative;
+    width: 270px;
+  }
+  .contact_Information ul li {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  .gridBg{
+    rotate: 180deg;
+    width: 100%;
+    height: auto;
+  }
+}
