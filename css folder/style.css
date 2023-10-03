@@ -6,12 +6,16 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
-
+body {
+  background-color: #fffcfc;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
 .container {
-  box-shadow: 35px 35px 35px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 35px 20px rgba(0, 0, 0, 0.3);
   display: grid;
   margin: 200px;
   grid-template-columns: 0.4fr 0.8fr;
@@ -21,8 +25,7 @@ html{
     "aside main"
     "aside main"
     "aside main";
-    overflow-x: hidden;
-
+  overflow-x: hidden;
 }
 
 aside {
@@ -51,7 +54,7 @@ aside::before {
   background-image: url("https://images.unsplash.com/photo-1608306448197-e83633f1261c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80");
   background-repeat: no-repeat;
   background-position: center;
-  background-size:cover;
+  background-size: cover;
   filter: saturate(10%);
 }
 
@@ -67,18 +70,18 @@ aside::before {
   background-color: rgba(0, 255, 255, 0.5);
   line-height: 1.1;
 }
-.gridBg{
+.gridBg {
   rotate: 180deg;
   position: absolute;
   height: 200%;
   width: auto;
   z-index: -1;
 }
-.name{
+.name {
   padding-left: 10px;
   border-left: 5px solid white;
 }
-.profile span{
+.profile span {
   color: black;
 }
 .profile_pic {
@@ -142,16 +145,16 @@ main {
   position: relative;
   padding: 20px;
   height: auto;
-  border-bottom: 0.5px solid rgb(192,192,192);
+  border-bottom: 0.5px solid rgb(192, 192, 192);
 }
 .sub_Container .objective p {
   position: relative;
   font-size: 0.8rem;
   font-weight: 400;
 }
-.sub_Container .objective p span{
+.sub_Container .objective p span {
   font-size: 1rem;
-  color: #4BC0C8;
+  color: #4bc0c8;
 }
 /***** Work Experience *****/
 .bar.work {
@@ -184,7 +187,7 @@ main {
   position: relative;
   content: "";
   border: 8px solid rgba(31, 28, 44, 0.8);
-  float: inline-start;
+  float: left;
   border-radius: 50%;
   margin: 20px;
 }
@@ -199,7 +202,7 @@ main {
   z-index: -1;
 }
 /***** Skills *****/
-.skill_Box{
+.skill_Box {
   margin: 10px;
 }
 .skill_Box .percent {
@@ -220,7 +223,7 @@ main {
 }
 .skill_Box h4 {
   position: relative;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   display: inline-block;
 }
 /***** Licenses and Certificate *****/
@@ -265,7 +268,6 @@ ul li h6 {
   aside {
     grid-template-rows: 1fr 0.3fr;
   }
-  
 }
 @media only screen and (min-width: 1025px) and (max-width: 1439px) {
   h2 {
@@ -304,8 +306,8 @@ ul li h6 {
     text-align: center;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px){
-  .gridBg{
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .gridBg {
     rotate: 180deg;
     width: 100%;
     height: auto;
